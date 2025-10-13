@@ -28,7 +28,7 @@ namespace ProductAPI.Controllers
             {
                 _logger.LogInformation($"Getting products - Search: {search}, Page: {page}");
                 
-                var limit = 10; // Items per page
+                var limit = 12; // Items per page
                 var skip = (page - 1) * limit;
                 
                 // Build the URL based on whether we're searching or not
