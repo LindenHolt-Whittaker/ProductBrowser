@@ -31,3 +31,4 @@ D:\Workplace\WebWorkspace\DirectFerriesTest\ProductAPI\obj\Debug\net8.0\refint\P
 D:\Workplace\WebWorkspace\DirectFerriesTest\ProductAPI\obj\Debug\net8.0\ProductAPI.pdb
 D:\Workplace\WebWorkspace\DirectFerriesTest\ProductAPI\obj\Debug\net8.0\ProductAPI.genruntimeconfig.cache
 D:\Workplace\WebWorkspace\DirectFerriesTest\ProductAPI\obj\Debug\net8.0\ref\ProductAPI.dll
+D:\Workplace\WebWorkspace\DirectFerriesTest\ProductAPI\obj\Debug\net8.0\ProductAPI.sourcelink.json
