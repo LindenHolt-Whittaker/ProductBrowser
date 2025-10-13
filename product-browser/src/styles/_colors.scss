@@ -1,0 +1,71 @@
+// Primary
+$primary-blue: #007bff;
+$primary-blue-dark: #0056b3;
+$primary-light-blue: #3498db;
+
+// Success
+$success-green: #27ae60;
+$success-bg: #d4edda;
+$success-border: #c3e6cb;
+$success-text: #155724;
+
+// Error
+$error-red: #dc3545;
+$error-red-hover: #c82333;
+$error-bg: #f8d7da;
+$error-border: #f5c6cb;
+$error-text: #721c24;
+
+// Warning
+$warning-yellow: #ffc107;
+$warning-yellow-hover: #e0a800;
+$warning-bg: #fff3cd;
+$warning-border: #ffeeba;
+$warning-text: #856404;
+
+// Neutrals
+$white: #ffffff;
+$gray-lightest: #f8f9fa;
+$gray-lighter: #f0f0f0;
+$gray-light: #e0e0e0;
+$gray: #999;
+$gray-dark: #6c757d;
+$gray-darker: #495057;
+$gray-darkest: #212529;
+$black: #000000;
+
+// Text
+$text-primary: #333;
+$text-secondary: $gray-dark;
+$text-muted: #666;
+$text-body: $gray-darker;
+
+// Borders
+$border-light: $gray-light;
+$border-default: #ddd;
+
+// Backgrounds
+$bg-light: $gray-lightest;
+$bg-white: $white;
+
+// Components
+$spinner-color: $primary-blue;
+$card-bg: $white;
+$card-border: $border-light;
+$price-color: $success-green;
+$rating-color: $warning-yellow;
+$link-color: $primary-light-blue;
+$link-hover-color: $primary-blue-dark;
+
+// Buttons
+$btn-primary-bg: $primary-blue;
+$btn-primary-hover: $primary-blue-dark;
+$btn-danger-bg: $error-red;
+$btn-danger-hover: $error-red-hover;
+$btn-disabled-bg: #ccc;
+
+// Shadows
+$focus-shadow-color: rgba(0, 123, 255, 0.25);
+$overlay-bg: rgba(0, 0, 0, 0.3);
+$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-medium: rgba(0, 0, 0, 0.15);

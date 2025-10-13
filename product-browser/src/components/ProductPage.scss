@@ -1,0 +1,4 @@
+// Body scroll lock when drawer is open
+body.drawer-open {
+  overflow-y: hidden;
+}
