@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /**
  * Custom hook to manage pagination state with automatic reset on dependency change
@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
  * @param initialPage - Initial page number (default: 1)
  */
 export const usePagination = (
-  resetDependency?: any, 
+  resetDependency?: any,
   initialPage: number = 1
 ): {
   page: number;
@@ -22,17 +22,17 @@ export const usePagination = (
     setPage(initialPage);
   }, [resetDependency, initialPage]);
 
-  const resetPage = () => {
+  const resetPage = useCallback(() => {
     setPage(initialPage);
-  };
+  }, [initialPage]);
 
-  const goToNextPage = () => {
+  const goToNextPage = useCallback(() => {
     setPage((prev) => prev + 1);
-  };
+  }, []);
 
-  const goToPreviousPage = () => {
+  const goToPreviousPage = useCallback(() => {
     setPage((prev) => Math.max(initialPage, prev - 1));
-  };
+  }, [initialPage]);
 
   return {
     page,
