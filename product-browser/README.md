@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# Product Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based product browsing application with search, pagination, and detailed product views. Built with TypeScript and modern React patterns for optimal performance and maintainability.
 
-Currently, two official plugins are available:
+## Tech
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI framework
+- **TypeScript** - Type safety and better developer experience
+- **Vite** - Build tool and development server
+- **React Query (TanStack Query)** - Server state management and caching
+- **React Router** - Client-side routing
+- **Axios** - HTTP client
+- **SCSS** - Styling with CSS preprocessor
+- **Vitest** - Unit testing framework
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 21 or higher
+- npm or yarn package manager
+- Backend API running on http://localhost:5182
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd product-browser
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The application will be available at http://localhost:5173
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+### Testing
+
+Run tests:
+
+```bash
+npm test
+```
+
+## Features
+
+### Product Browsing
+- Grid layout displaying 12 products per page
+- Responsive design adapts to different screen sizes
+- Smooth loading states and error handling
+
+### Search Functionality
+- Real-time search with 500ms debounce
+- Search results update without page refresh
+- Automatic pagination reset on new searches
+
+### Product Details
+- Quick view drawer for product information
+- Full detail page with product information
+- Image lazy loading for performance
+
+### Navigation
+- Pagination controls for browsing large product sets
+- Direct routing to individual product pages
+
+### Performance Optimizations
+- React Query caching reduces unnecessary API calls
+- Debounced search prevents excessive requests
+- Optimistic UI updates for better perceived performance
+- Code splitting with React Router
+
+
+## Component Documentation
+
+### ProductPage
+Main landing page component that orchestrates product listing, search, and detail viewing.
+
+### ProductList
+Displays products in a responsive grid with pagination controls. Handles loading and error states.
+
+### ProductDetail
+Drawer component for quick product preview with smooth animations and backdrop overlay.
+
+### ProductDetailPage
+Full-page product view with complete information, accessible via direct URL.
+
+### SearchBar
+Input component with built-in debouncing and clear functionality.
+
+### Custom Hooks
+
+- **useProducts**: Fetches paginated product list with caching
+- **useProduct**: Fetches individual product details
+- **useDebounce**: Delays value updates for performance
+- **usePagination**: Manages pagination state with search reset
+- **useDrawer**: Controls drawer animation state
+- **useScrollLock**: Prevents background scrolling when drawer is open
+
+## Known Limitations
+
+1. Cart functionality is not implemented (placeholder buttons only)
+2. Hardcoded api endpoint used
+3. Limited test coverage (only hooks tested)
+4. Accessibility features missing
+
