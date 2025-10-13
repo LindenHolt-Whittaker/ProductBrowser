@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Product detail page styles with proper nesting
 .product-detail-page-container {
@@ -11,7 +11,7 @@
       margin-bottom: 30px;
 
       &-link {
-        color: $text-body;
+        color: vars.$text-body;
         text-decoration: none;
         font-size: 14px;
         display: inline-flex;
@@ -19,7 +19,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: $link-color;
+          color: vars.$link-color;
         }
       }
     }
@@ -28,10 +28,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      background: $bg-white;
+      background: vars.$bg-white;
       border-radius: 12px;
       padding: 40px;
-      box-shadow: 0 2px 10px $shadow-light;
+      box-shadow: 0 2px 10px vars.$shadow-light;
 
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -51,7 +51,7 @@
       max-width: 500px;
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 6px $shadow-light;
+      box-shadow: 0 4px 6px vars.$shadow-light;
     }
 
     &__info-section {
@@ -63,14 +63,14 @@
     &__title {
       font-size: 32px;
       font-weight: 700;
-      color: $text-body;
+      color: vars.$text-body;
       margin: 0;
       line-height: 1.2;
     }
 
     &__brand {
       font-size: 18px;
-      color: $gray;
+      color: vars.$gray;
       margin: 0;
     }
 
@@ -79,10 +79,10 @@
       align-items: center;
       gap: 8px;
       font-size: 20px;
-      color: $rating-color;
+      color: vars.$rating-color;
 
       &-value {
-        color: $gray;
+        color: vars.$gray;
         font-size: 16px;
         margin-left: 8px;
       }
@@ -91,13 +91,13 @@
     &__price {
       font-size: 36px;
       font-weight: 700;
-      color: $price-color;
+      color: vars.$price-color;
     }
 
     &__description {
       font-size: 16px;
       line-height: 1.6;
-      color: $text-body;
+      color: vars.$text-body;
       margin: 16px 0;
     }
 
@@ -109,15 +109,15 @@
       font-weight: 500;
 
       &--in-stock {
-        background: $success-bg;
-        color: $success-text;
-        border: 1px solid $success-border;
+        background: vars.$success-bg;
+        color: vars.$success-text;
+        border: 1px solid vars.$success-border;
       }
 
       &--out-of-stock {
-        background: $error-bg;
-        color: $error-text;
-        border: 1px solid $error-border;
+        background: vars.$error-bg;
+        color: vars.$error-text;
+        border: 1px solid vars.$error-border;
       }
     }
 
@@ -134,21 +134,21 @@
     &__add-to-cart {
       flex: 1;
       padding: 14px 24px;
-      background: $link-color;
-      color: $white;
+      background: vars.$primary-blue;
+      color: vars.$white;
       border: none;
-      border-radius: 8px;
+      border-radius: 4px;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.3s ease;
 
       &:hover:not(:disabled) {
-        background: $link-hover-color;
+        background: vars.$btn-primary-hover;
       }
 
       &:disabled {
-        background: $gray;
+        background: vars.$gray;
         cursor: not-allowed;
         opacity: 0.7;
       }
@@ -158,18 +158,18 @@
       flex: 1;
       padding: 14px 24px;
       background: transparent;
-      color: $link-color;
-      border: 2px solid $link-color;
-      border-radius: 8px;
+      color: vars.$primary-blue;
+      border: 2px solid vars.$primary-blue;
+      border-radius: 4px;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
 
       &:hover {
-        border-color: $link-hover-color;
-        background: $link-hover-color;
-        color: $white;
+        border-color: vars.$btn-primary-hover;
+        background: vars.$btn-primary-hover;
+        color: vars.$white;
       }
     }
 
@@ -179,7 +179,7 @@
       
       h2 {
         font-size: 28px;
-        color: $text-body;
+        color: vars.$text-body;
         margin-bottom: 20px;
       }
     }

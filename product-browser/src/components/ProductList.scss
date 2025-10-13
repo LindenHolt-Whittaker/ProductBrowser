@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Product grid
 .product-grid {
@@ -22,7 +22,7 @@
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
-  color: $text-secondary;
+  color: vars.$text-secondary;
 
   h3 {
     font-size: 1.5rem;

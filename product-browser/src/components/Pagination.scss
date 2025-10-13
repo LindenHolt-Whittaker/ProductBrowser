@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Pagination component
 .pagination {
@@ -13,8 +13,8 @@
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
     font-weight: 500;
-    background-color: $btn-primary-bg;
-    color: $white;
+    background-color: vars.$btn-primary-bg;
+    color: vars.$white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -22,30 +22,30 @@
     min-width: 80px;
 
     &:hover:not(:disabled) {
-      background-color: $btn-primary-hover;
+      background-color: vars.$btn-primary-hover;
       transform: translateY(-2px);
-      box-shadow: 0 2px 4px $shadow-medium;
+      box-shadow: 0 2px 4px vars.$shadow-medium;
     }
 
     &:disabled {
-      background-color: $gray-light;
-      color: $text-secondary;
+      background-color: vars.$gray-light;
+      color: vars.$text-secondary;
       cursor: not-allowed;
       opacity: 0.6;
     }
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 3px $focus-shadow-color;
+      box-shadow: 0 0 0 3px vars.$focus-shadow-color;
     }
   }
 
   &__info {
     font-size: 0.95rem;
     font-weight: 500;
-    color: $gray-darker;
+    color: vars.$gray-darker;
     padding: 0.5rem 1rem;
-    background-color: $bg-light;
+    background-color: vars.$bg-light;
     border-radius: 4px;
     min-width: 120px;
     text-align: center;

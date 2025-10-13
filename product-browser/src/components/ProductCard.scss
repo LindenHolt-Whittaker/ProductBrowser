@@ -1,19 +1,19 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Product card component
 .product-card {
-  background-color: $card-bg;
-  border: 1px solid $card-border;
+  background-color: vars.$card-bg;
+  border: 1px solid vars.$card-border;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px $shadow-light;
+  box-shadow: 0 2px 4px vars.$shadow-light;
   animation: fadeIn 0.3s ease-out;
   
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 8px $shadow-medium;
+    box-shadow: 0 4px 8px vars.$shadow-medium;
 
     .product-card__image {
       transform: scale(1.05);
@@ -21,7 +21,7 @@
   }
 
   &:focus {
-    border: 2px solid $primary-blue;
+    outline: 2px solid vars.$primary-blue;
   }
 
   &__image {
@@ -39,7 +39,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
-    color: $text-primary;
+    color: vars.$text-primary;
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -48,19 +48,26 @@
     text-overflow: ellipsis;
   }
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__brand {
     font-size: 0.9rem;
-    color: $text-muted;
-    margin: 0 0 0.5rem 0;
+    color: vars.$text-muted;
+    margin: 0;
     font-style: italic;
-    min-height: 2rem;
+    min-height: 1rem;
+    text-overflow: ellipsis;
   }
 
   &__price {
     font-size: 1.3rem;
     font-weight: bold;
-    color: $price-color;
-    margin: 0.5rem 0;
+    color: vars.$price-color;
+    margin-top: 0.75rem;
 
     &::before {
       content: '$';
@@ -72,10 +79,10 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: $rating-color;
+    color: vars.$rating-color;
 
     span {
-      color: $text-muted;
+      color: vars.$text-muted;
       font-size: 0.85rem;
     }
   }
@@ -87,10 +94,11 @@
   }
 
   &__link-button {
-    background: $link-color;
-    color: $white;
-    padding: 8px 16px;
-    border-radius: 6px;
+    background: transparent;
+    color: vars.$primary-blue;
+    border: 1px solid vars.$primary-blue;
+    padding: 4px 12px;
+    border-radius: 4px;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
@@ -98,7 +106,9 @@
     display: inline-block;
     
     &:hover {
-      background: $link-hover-color;
+      border-color: vars.$btn-primary-hover;
+      background: vars.$btn-primary-hover;
+      color: vars.$white;
     }
   }
 }

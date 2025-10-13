@@ -25,20 +25,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
       <img src={product.thumbnail} alt={product.title} className="product-card__image" />
       <div className="product-card__info">
         <h3 className="product-card__title">{product.title}</h3>
-        <p className="product-card__brand">{product.brand}</p>
-        <div className="product-card__price">{product.price}</div>
-        <div className="product-card__rating">
-          {rating.stars}
-          <span>{rating.value}</span>
+        <div className="product-card__container">
+          <p className="product-card__brand">{product.brand}</p>
+          <div className="product-card__rating">
+            {rating.stars}
+            <span>{rating.value}</span>
+          </div>
         </div>
-        <div className="product-card__actions">
-          <Link
-            to={`/product/${product.id}`}
-            className="product-card__link-button"
-            onClick={(e) => e.stopPropagation()}
-          >
-            View Details →
-          </Link>
+        <div className="product-card__container">
+          <div className="product-card__price">{product.price}</div>
+          <div className="product-card__actions">
+            <Link
+              to={`/product/${product.id}`}
+              className="product-card__link-button"
+              onClick={(e) => e.stopPropagation()}
+            >
+              View Details →
+            </Link>
+          </div>
         </div>
       </div>
     </div>

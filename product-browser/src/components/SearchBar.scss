@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Search bar component
 .search-bar {
@@ -13,28 +13,28 @@
     left: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    color: $text-muted;
+    color: vars.$text-muted;
     font-size: 1rem;
     pointer-events: none;
   }
 
   &__input {
-    width: 100%;
+    width: calc(100% - 3.6rem);
     padding: 0.75rem 1rem 0.75rem 2.5rem;
     font-size: 1rem;
-    border: 2px solid $border-default;
+    border: 2px solid vars.$border-default;
     border-radius: 25px;
-    background-color: $bg-white;
+    background-color: vars.$bg-white;
     transition: all 0.3s ease;
     
     &:focus {
       outline: none;
-      border-color: $primary-blue;
-      box-shadow: 0 0 0 3px $focus-shadow-color;
+      border-color: vars.$primary-blue;
+      box-shadow: 0 0 0 3px vars.$focus-shadow-color;
     }
 
     &::placeholder {
-      color: $gray;
+      color: vars.$gray;
     }
   }
 
@@ -48,11 +48,11 @@
     border: none;
     cursor: pointer;
     padding: 0.25rem;
-    color: $gray;
+    color: vars.$gray;
     font-size: 1.2rem;
     
     &:hover {
-      color: $text-muted;
+      color: vars.$text-muted;
     }
   }
 
@@ -66,7 +66,7 @@
       transform: translateY(-50%);
       width: 16px;
       height: 16px;
-      border: 2px solid $primary-blue;
+      border: 2px solid vars.$primary-blue;
       border-top-color: transparent;
       border-radius: 50%;
       animation: spin 0.8s linear infinite;

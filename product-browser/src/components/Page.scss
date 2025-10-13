@@ -1,14 +1,14 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Page container
 .page {
   min-height: 100vh;
-  background-color: $bg-light;
-  color: $text-primary;
+  background-color: vars.$bg-light;
+  color: vars.$text-primary;
 
   &__header {
-    background-color: $bg-white;
-    box-shadow: 0 2px 4px $shadow-light;
+    background-color: vars.$bg-white;
+    box-shadow: 0 2px 4px vars.$shadow-light;
     padding: 1.5rem 0;
     margin-bottom: 2rem;
     position: sticky;
@@ -17,7 +17,7 @@
 
     h1 {
       text-align: center;
-      color: $primary-blue;
+      color: vars.$primary-blue;
       margin: 0;
       font-size: 4rem;
       font-weight: 600;

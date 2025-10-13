@@ -1,9 +1,9 @@
-@import '../styles/colors';
+@use '../styles/colors' as vars;
 
 // Variables for the drawer
 $drawer-width: 500px;
 $transition-duration: var(--drawer-transition, 300ms);
-$drawer-shadow: -2px 0 10px $shadow-light;
+$drawer-shadow: -2px 0 10px vars.$shadow-light;
 
 // Sliding drawer container
 .product-drawer {
@@ -12,7 +12,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
   right: 0;
   bottom: 0;
   width: $drawer-width;
-  background-color: $bg-white;
+  background-color: vars.$bg-white;
   box-shadow: $drawer-shadow;
   transform: translateX($drawer-width);
   transition: transform $transition-duration ease-in-out;
@@ -35,7 +35,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $overlay-bg;
+  background-color: vars.$overlay-bg;
   opacity: 0;
   visibility: hidden;
   transition: opacity $transition-duration ease-in-out, 
@@ -60,12 +60,12 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: $text-muted;
+    color: vars.$text-muted;
     transition: color 0.2s;
     z-index: 10;
 
     &:hover {
-      color: $text-primary;
+      color: vars.$text-primary;
     }
   }
 
@@ -85,7 +85,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, $gray-lighter 25%, $gray-light 50%, $gray-lighter 75%);
+    background: linear-gradient(90deg, vars.$gray-lighter 25%, vars.$gray-light 50%, vars.$gray-lighter 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     border-radius: 8px;
@@ -123,18 +123,18 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: $text-primary;
+    color: vars.$text-primary;
     transition: color 0.2s ease;
     cursor: pointer;
     
     &:hover {
-      color: $link-hover-color;
+      color: vars.$link-hover-color;
     }
   }
 
   &__brand {
     font-size: 1.2rem;
-    color: $text-muted;
+    color: vars.$text-muted;
     margin-bottom: 1rem;
     font-style: italic;
   }
@@ -142,7 +142,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
   &__price {
     font-size: 1.8rem;
     font-weight: bold;
-    color: $price-color;
+    color: vars.$price-color;
     margin-bottom: 1rem;
 
     &::before {
@@ -153,10 +153,10 @@ $drawer-shadow: -2px 0 10px $shadow-light;
   &__description {
     font-size: 1rem;
     line-height: 1.6;
-    color: $text-body;
+    color: vars.$text-body;
     margin-bottom: 0.5rem;
     padding: 1rem;
-    background-color: $bg-light;
+    background-color: vars.$bg-light;
     border-radius: 4px;
   }
 
@@ -166,10 +166,10 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     gap: 0.5rem;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    color: $rating-color;
+    color: vars.$rating-color;
 
     span {
-      color: $text-muted;
+      color: vars.$text-muted;
       font-size: 0.85rem;
     }
   }
@@ -182,15 +182,15 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     display: inline-block;
 
     &--in-stock {
-      background-color: $success-bg;
-      color: $success-text;
-      border: 1px solid $success-border;
+      background-color: vars.$success-bg;
+      color: vars.$success-text;
+      border: 1px solid vars.$success-border;
     }
 
     &--out-of-stock {
-      background-color: $error-bg;
-      color: $error-text;
-      border: 1px solid $error-border;
+      background-color: vars.$error-bg;
+      color: vars.$error-text;
+      border: 1px solid vars.$error-border;
     }
   }
 
@@ -199,19 +199,19 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     padding: 1rem;
     font-size: 1.1rem;
     font-weight: 600;
-    background-color: $btn-primary-bg;
-    color: $white;
+    background-color: vars.$btn-primary-bg;
+    color: vars.$white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
 
     &:hover:not(:disabled) {
-      background-color: $btn-primary-hover;
+      background-color: vars.$btn-primary-hover;
     }
 
     &:disabled {
-      background-color: $btn-disabled-bg;
+      background-color: vars.$btn-disabled-bg;
       cursor: not-allowed;
       opacity: 0.6;
     }
@@ -222,7 +222,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     color: inherit;
     
     &:hover .product-detail__title {
-      color: $link-color;
+      color: vars.$link-color;
     }
   }
 
@@ -238,8 +238,8 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     text-align: center;
     padding: 1rem;
     background: transparent;
-    color: $primary-blue;
-    border: 2px solid $primary-blue;
+    color: vars.$primary-blue;
+    border: 2px solid vars.$primary-blue;
     border-radius: 4px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -249,9 +249,9 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     box-sizing: border-box;
 
     &:hover {
-      border-color: $link-hover-color;
-      background: $link-hover-color;
-      color: $white;
+      border-color: vars.$btn-primary-hover;
+      background: vars.$btn-primary-hover;
+      color: vars.$white;
     }
   }
 
@@ -265,7 +265,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
 
     &-spinner {
       font-size: 1.2rem;
-      color: $text-muted;
+      color: vars.$text-muted;
       text-align: center;
       
       &::before {
@@ -274,8 +274,8 @@ $drawer-shadow: -2px 0 10px $shadow-light;
         width: 40px;
         height: 40px;
         margin: 0 auto 1rem;
-        border: 3px solid $gray-lighter;
-        border-top: 3px solid $primary-blue;
+        border: 3px solid vars.$gray-lighter;
+        border-top: 3px solid vars.$primary-blue;
         border-radius: 50%;
         animation: spin 1s linear infinite;
       }
@@ -293,21 +293,21 @@ $drawer-shadow: -2px 0 10px $shadow-light;
     justify-content: center;
 
     h3 {
-      color: $error-red;
+      color: vars.$error-red;
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
 
     p {
-      color: $text-muted;
+      color: vars.$text-muted;
       margin-bottom: 1.5rem;
       font-size: 1rem;
     }
 
     &-button {
       padding: 0.5rem 1.5rem;
-      background-color: $btn-danger-bg;
-      color: $white;
+      background-color: vars.$btn-danger-bg;
+      color: vars.$white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -315,7 +315,7 @@ $drawer-shadow: -2px 0 10px $shadow-light;
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: $btn-danger-hover;
+        background-color: vars.$btn-danger-hover;
       }
     }
   }
