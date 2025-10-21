@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { Product, ProductsResponse } from '../types/product';
 
-const API_BASE = 'http://localhost:5182/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 export const productsApi = {
   getProducts: async (page: number = 1, search: string = ''): Promise<ProductsResponse> => {

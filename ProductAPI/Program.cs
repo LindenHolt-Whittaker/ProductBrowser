@@ -1,4 +1,16 @@
+using DotNetEnv;
+
+// Load environment variables from .env file
+Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Override the listening URLs from environment variable if provided
+var apiHostUrl = Environment.GetEnvironmentVariable("PRODUCT_API_HOST_URL");
+if (!string.IsNullOrEmpty(apiHostUrl))
+{
+    builder.WebHost.UseUrls(apiHostUrl);
+}
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -17,7 +29,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy("ReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173") // React dev server
+            // Get the UI URL from environment variable or use default
+            var uiUrl = Environment.GetEnvironmentVariable("PRODUCT_BROWSER_UI_URL")
+                        ?? builder.Configuration["CorsSettings:AllowedOrigins:0"]
+                        ?? "http://localhost:3000";
+            
+            policy.WithOrigins(uiUrl)
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

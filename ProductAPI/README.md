@@ -28,9 +28,9 @@ dotnet restore
 dotnet run
 ```
 
-The API will start on:
-- HTTP: http://localhost:5182
-- Swagger UI: http://localhost:5182/swagger
+The API will start on port `:5000` by default:
+- HTTP: http://localhost:5000
+- Swagger UI: http://localhost:5000/swagger
 
 ### Running Tests
 

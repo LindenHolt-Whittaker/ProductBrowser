@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj": {}
+    "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj": {}
   },
   "projects": {
-    "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj": {
+    "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj",
+        "projectUniqueName": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj",
         "projectName": "ProductAPI",
-        "projectPath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj",
+        "projectPath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj",
         "packagesPath": "C:\\Users\\linde\\.nuget\\packages\\",
-        "outputPath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\obj\\",
+        "outputPath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\linde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.20, )"

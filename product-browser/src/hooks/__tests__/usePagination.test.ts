@@ -234,6 +234,7 @@ describe('usePagination', () => {
       const { result, rerender } = renderHook(
         ({ dependency }) => usePagination(dependency, 1),
         {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           initialProps: { dependency: null as any },
         }
       );

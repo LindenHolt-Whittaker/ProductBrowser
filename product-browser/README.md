@@ -17,7 +17,7 @@ A React-based product browsing application with search, pagination, and detailed
 
 - Node.js 21 or higher
 - npm or yarn package manager
-- Backend API running on http://localhost:5182
+- Backend API running on http://localhost:5000 by default
 
 ## Getting Started
 
@@ -36,7 +36,7 @@ Start the development server:
 npm run dev
 ```
 
-The application will be available at http://localhost:5173
+The application will be available at http://localhost:3000 by default
 
 ### Build
 

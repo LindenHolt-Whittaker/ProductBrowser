@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "IqqIquP2RqQ=",
   "success": true,
-  "projectFilePath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
+  "projectFilePath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\linde\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\linde\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

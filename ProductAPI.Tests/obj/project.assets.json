@@ -6130,11 +6130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
+      "projectUniqueName": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
       "projectName": "ProductAPI.Tests",
-      "projectPath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
+      "projectPath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
       "packagesPath": "C:\\Users\\linde\\.nuget\\packages\\",
-      "outputPath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI.Tests\\obj\\",
+      "outputPath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\linde\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6149,8 +6149,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj": {
-              "projectPath": "D:\\Workplace\\WebWorkspace\\DirectFerriesTest\\ProductAPI\\ProductAPI.csproj"
+            "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj": {
+              "projectPath": "D:\\Workplace\\WebWorkspace\\ProductBrowser\\ProductAPI\\ProductAPI.csproj"
             }
           }
         }

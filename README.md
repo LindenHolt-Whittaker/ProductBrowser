@@ -7,7 +7,7 @@ This application provides a responsive product browsing experience with search f
 ## Project Structure
 
 ```
-DirectFerriesTest/
+ProductBrowser/
 ├── product-browser/     # Frontend - React/TypeScript application
 ├── ProductAPI/         # Backend - .NET 8 Web API
 └── ProductAPI.Tests/   # Backend unit tests
@@ -39,7 +39,7 @@ A .NET 8 Web API.
 cd ProductAPI
 dotnet run
 ```
-The API will be available at http://localhost:5182
+The API will be available at http://localhost:5000 by default
 
 2. **Start the Frontend:**
 ```bash
@@ -47,7 +47,7 @@ cd product-browser
 npm install
 npm run dev
 ```
-The application will be available at http://localhost:5173
+The application will be available at http://localhost:3000 by default
 
 ### Running Tests
 
@@ -67,7 +67,7 @@ npm test
 
 1. Clone the repository
 2. Follow the setup instructions in each project's README
-3. Ensure ports 5182 (backend) and 5173 (frontend) are available
+3. Ensure ports for backend and frontend are available
 4. Backend must be running before starting the frontend
 
 ## Known Limitations
