@@ -1,4 +1,3 @@
-import React from 'react';
 import { useProducts } from '../hooks/useProducts';
 import { usePagination } from '../hooks/usePagination';
 import { ProductCard } from './ProductCard';
