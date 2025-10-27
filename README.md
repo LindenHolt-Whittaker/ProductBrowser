@@ -1,8 +1,16 @@
 # Product Browser Application
 
+**[🔗 View Live Demo](https://lindenholt-whittaker.github.io/ProductBrowser/)**
+
 A full-stack web application for browsing and searching products. This application showcases modern web development practices with a React frontend and .NET backend.
 
 This application provides a responsive product browsing experience with search functionality, pagination, and detailed product views. The backend serves as a proxy to the DummyJSON API, adding caching and normalization layers for improved performance.
+
+![Product Browser Screenshot 1](images/screenshot0.png)
+
+![Product Browser Screenshot 2](images/screenshot1.png)
+
+![Product Browser Screenshot 3](images/screenshot2.png)
 
 ## Project Structure
 
